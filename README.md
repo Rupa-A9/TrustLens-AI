@@ -18,11 +18,11 @@
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Open%20TrustLens%20AI-FF4B4B?style=for-the-badge" alt="Live Demo">
+    <img src="https://img.shields.io/badge/LIVE%20DEMO-Open%20TrustLens%20AI-FF4B4B?style=for-the-badge" alt="Live Demo">
   </a>
   &nbsp;
   <a href="https://github.com/Rupa-A9/TrustLens-AI">
-    <img src="https://img.shields.io/badge/💻%20SOURCE%20CODE-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
+    <img src="https://img.shields.io/badge/SOURCE%20CODE-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
   </a>
 </p>
 
@@ -30,7 +30,7 @@
 
 ## 🌐 Live Demo
 
-### 🚀 Try TrustLens AI
+###  Try TrustLens AI
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
@@ -46,7 +46,7 @@ https://github.com/Rupa-A9/TrustLens-AI
 
 ---
 
-# 📌 About The Project
+#  About The Project
 
 **TrustLens AI** is a machine-learning powered web application designed to
 identify potentially fake or suspicious product reviews.
@@ -66,7 +66,7 @@ and download PDF analysis reports.
 
 ---
 
-# 🎯 Problem Statement
+#  Problem Statement
 
 Online product reviews strongly influence purchasing decisions.
 
@@ -82,7 +82,7 @@ from labeled review data and using those patterns to classify new reviews.
 
 ---
 
-# 💡 Solution
+#  Solution
 
 TrustLens AI processes review text through a machine-learning pipeline:
 
@@ -118,24 +118,24 @@ TrustLens AI processes review text through a machine-learning pipeline:
 
 ---
 
-# ✨ Key Features
+#  Key Features
 
 | Feature                    | Description                                  |
 | -------------------------- | -------------------------------------------- |
-| 🔍 Single Review Detection | Analyze an individual product review         |
-| 📂 Batch Detection         | Upload a CSV and analyze multiple reviews    |
-| 🧠 TF-IDF                  | Convert review text into numerical features  |
-| ⚖️ Linear SVM              | Classify reviews using the trained model     |
-| 📊 Dashboard               | View model performance metrics               |
-| 🧠 Model Insights          | Understand the machine-learning pipeline     |
-| 📄 PDF Reports             | Download review analysis reports             |
-| 📈 Review Statistics       | Characters, words, lines and processing time |
-| ⚡ Fast Prediction          | Real-time review classification              |
-| ☁️ Cloud Deployment        | Deployed using Streamlit Community Cloud     |
+|  Single Review Detection | Analyze an individual product review         |
+|  Batch Detection         | Upload a CSV and analyze multiple reviews    |
+|  TF-IDF                  | Convert review text into numerical features  |
+|  Linear SVM              | Classify reviews using the trained model     |
+|  Dashboard               | View model performance metrics               |
+|  Model Insights          | Understand the machine-learning pipeline     |
+|  PDF Reports             | Download review analysis reports             |
+|  Review Statistics       | Characters, words, lines and processing time |
+|  Fast Prediction          | Real-time review classification              |
+|  Cloud Deployment        | Deployed using Streamlit Community Cloud     |
 
 ---
 
-# 📊 Model Performance
+#  Model Performance
 
 The trained Linear SVM model achieved the following evaluation results:
 
@@ -143,11 +143,11 @@ The trained Linear SVM model achieved the following evaluation results:
 
 | Metric        |         Result |
 | ------------- | -------------: |
-| 🎯 Accuracy   |     **89.16%** |
-| 🎯 Precision  |     **89.05%** |
-| 🔎 Recall     |     **89.29%** |
-| ⚖️ F1 Score   |     **89.17%** |
-| 🧠 Best Model | **Linear SVM** |
+|  Accuracy     |     **89.16%** |
+|  Precision    |     **89.05%** |
+|  Recall       |     **89.29%** |
+|  F1 Score     |     **89.17%** |
+|  Best Model   | **Linear SVM** |
 
 </div>
 
@@ -156,7 +156,7 @@ The trained Linear SVM model achieved the following evaluation results:
 
 ---
 
-# 🧠 Machine Learning Pipeline
+#  Machine Learning Pipeline
 
 ## 01 — Natural Language Processing
 
@@ -213,7 +213,7 @@ The model returns the predicted review category.
 
 ---
 
-# 🔍 Single Review Detection
+#  Single Review Detection
 
 The **Detect** page allows users to enter a product review and analyze it
 in real time.
@@ -250,7 +250,7 @@ Generate Report
 
 ---
 
-# 📂 Batch Detection
+#  Batch Detection
 
 The **Batch Detection** page allows users to upload a CSV containing
 multiple product reviews.
@@ -271,7 +271,7 @@ This allows multiple reviews to be analyzed efficiently.
 
 ---
 
-# 📊 Dashboard
+#  Dashboard
 
 The **Dashboard** provides an overview of the trained model.
 
@@ -287,7 +287,7 @@ It includes:
 
 ---
 
-# 🧠 Model Insights
+#  Model Insights
 
 The **Insights** page explains the complete TrustLens AI machine-learning
 pipeline.
@@ -317,7 +317,7 @@ The page also explains:
 
 ---
 
-# 📄 PDF Report Generation
+#  PDF Report Generation
 
 After analyzing a review, TrustLens AI can generate a downloadable PDF
 report.
@@ -337,7 +337,7 @@ PDF generation is implemented using **ReportLab**.
 
 ---
 
-# 🔬 Exploratory Data Analysis
+#  Exploratory Data Analysis
 
 The project contains an EDA pipeline for analyzing the review dataset.
 
@@ -367,7 +367,7 @@ outputs/
 
 ---
 
-# 🛠️ Technology Stack
+#  Technology Stack
 
 ## Programming
 
@@ -403,7 +403,7 @@ outputs/
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 TrustLens-AI/
@@ -416,16 +416,12 @@ TrustLens-AI/
 │       ├── components.css
 │       ├── globals.css
 │       ├── pages.css
-│       └── style.css
 │
 ├── components/
 │   ├── hero.html
 │   ├── hero.py
-│   ├── metrics.py
 │   ├── navbar.html
 │   ├── navbar.py
-│   ├── quick_actions.py
-│   └── workflow.py
 │
 ├── data/
 │   └── processed review data
@@ -456,7 +452,6 @@ TrustLens-AI/
 │   ├── load_css.py
 │   ├── pdf.py
 │   ├── preprocess.py
-│   └── svg.py
 │
 ├── app.py
 ├── config.py
@@ -580,7 +575,7 @@ TrustLens AI is deployed using **Streamlit Community Cloud**.
               └───────────────┘
 ```
 
-### 🚀 Launch Application
+###  Launch Application
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
@@ -590,7 +585,7 @@ TrustLens AI is deployed using **Streamlit Community Cloud**.
 
 ---
 
-# 🔄 Complete Application Workflow
+# Complete Application Workflow
 
 ```text
                          ┌─────────────────┐
@@ -630,102 +625,8 @@ TrustLens AI is deployed using **Streamlit Community Cloud**.
 
 ---
 
-# 📸 Application Screenshots
 
-> Add your actual screenshots inside a `screenshots/` folder in the
-> repository and uncomment the image paths below.
-
-## 🏠 Home Page
-
-<!--
-![TrustLens AI Home](screenshots/home.png)
--->
-
----
-
-## 🔍 Detection Page
-
-<!--
-![Review Detection](screenshots/detect.png)
--->
-
----
-
-## 📂 Batch Detection
-
-<!--
-![Batch Detection](screenshots/batch.png)
--->
-
----
-
-## 📊 Dashboard
-
-<!--
-![Dashboard](screenshots/dashboard.png)
--->
-
----
-
-## 🧠 Model Insights
-
-<!--
-![Model Insights](screenshots/insights.png)
--->
-
----
-
-# 🧪 Example Prediction
-
-### Example Input
-
-```text
-Recvd intact, heated after the initial start but back to normal,
-battery back up is great ita been 3 days since my kid is using it
-for games and youtube works well.
-```
-
-### Example Output
-
-```text
-Prediction:
-Fake / Suspicious Review
-
-Confidence:
-53.25%
-
-Review Statistics:
-Characters: 205
-Words: 39
-Lines: 2
-
-Processing Time:
-0.384 seconds
-```
-
-> Model predictions are based on learned patterns and should not be treated
-> as definitive proof that a review is fraudulent.
-
----
-
-# 🔐 Responsible Use
-
-TrustLens AI is a machine-learning classification system.
-
-A prediction of:
-
-```text
-Fake / Suspicious Review
-```
-
-does not automatically prove that a review is fraudulent.
-
-The system should be treated as a **decision-support tool**, rather than the
-sole basis for moderation, business, or customer decisions.
-
----
-
-# 🚧 Limitations
+#  Limitations
 
 Current limitations include:
 
@@ -739,7 +640,7 @@ Current limitations include:
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 Possible future improvements include:
 
@@ -758,7 +659,7 @@ Possible future improvements include:
 
 ---
 
-# 📈 Future Architecture
+#  Future Architecture
 
 ```text
                   Review Data
@@ -789,7 +690,7 @@ Possible future improvements include:
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 ## Rupa-A9
 
@@ -829,35 +730,15 @@ If you find this project useful, consider giving the repository a ⭐.
 
 <b>🛡️ TrustLens AI</b>
 
-<br><br>
-
 Analyze Reviews. Detect Deception. Build Trust.
-
-<br><br>
 
 Built with Python • NLP • TF-IDF • Linear SVM • Streamlit
 
 <br><br>
 
 <a href="https://trustlens-ai-rupa.streamlit.app/">
-  🚀 Open Live Application
+   Open Live Application
 </a>
 
-  •  
-
-<a href="https://github.com/Rupa-A9/TrustLens-AI">
-  💻 View Source Code
-</a>
-
-</p>
 ```
 
-After pasting and saving:
-
-```powershell
-git add README.md
-git commit -m "Create professional project README"
-git push
-```
-
-This is **one complete `README.md` code**, not separate pieces.
