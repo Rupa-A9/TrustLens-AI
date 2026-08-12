@@ -22,26 +22,6 @@ load_css()
 # SAMPLE REVIEWS
 # =========================================================
 
-SAMPLES = {
-    "positive": (
-        "I bought these wireless headphones last month and "
-        "I am extremely impressed. The sound quality is excellent, "
-        "the bass is clear, and the battery lasts all day. "
-        "They are also very comfortable for long study sessions."
-    ),
-
-    "negative": (
-        "The product arrived damaged and stopped working after "
-        "two days. The packaging was terrible and customer support "
-        "did not respond to my messages. Very disappointing experience."
-    ),
-
-    "suspicious": (
-        "BEST PRODUCT EVER!!! AMAZING!!! PERFECT!!! "
-        "BUY THIS NOW!!! FIVE STARS!!! EVERYTHING IS PERFECT!!! "
-        "HIGHLY RECOMMENDED!!! AMAZING QUALITY!!!"
-    ),
-}
 
 
 # =========================================================
@@ -75,51 +55,7 @@ st.divider()
 # SAMPLE REVIEW BUTTONS
 # =========================================================
 
-st.subheader("Try a sample review")
 
-sample_col1, sample_col2, sample_col3 = st.columns(3)
-
-
-with sample_col1:
-
-    if st.button(
-        "🟢 Positive Review",
-        use_container_width=True,
-    ):
-        st.session_state.detect_review_text = (
-            SAMPLES["positive"]
-        )
-        st.session_state.last_detection = None
-        st.rerun()
-
-
-with sample_col2:
-
-    if st.button(
-        "🔴 Negative Review",
-        use_container_width=True,
-    ):
-        st.session_state.detect_review_text = (
-            SAMPLES["negative"]
-        )
-        st.session_state.last_detection = None
-        st.rerun()
-
-
-with sample_col3:
-
-    if st.button(
-        "⚠️ Suspicious Review",
-        use_container_width=True,
-    ):
-        st.session_state.detect_review_text = (
-            SAMPLES["suspicious"]
-        )
-        st.session_state.last_detection = None
-        st.rerun()
-
-
-st.markdown("")
 
 
 # =========================================================
