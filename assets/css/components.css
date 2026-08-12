@@ -1206,3 +1206,636 @@
     }
 
 }
+/* =====================================================
+   TRUSTLENS AI - MOBILE RESPONSIVE DESIGN
+   Final responsive overrides
+   ===================================================== */
+
+/* -----------------------------------------------------
+   TABLETS
+   ----------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .block-container {
+        max-width: 100% !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        padding-top: 20px !important;
+        padding-bottom: 50px !important;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        width: 100% !important;
+        min-height: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+
+        gap: 14px !important;
+
+        padding: 18px !important;
+        margin-bottom: 25px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .navbar-left {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 10px !important;
+
+        overflow: hidden !important;
+    }
+
+    .navbar-brand {
+        font-size: 20px !important;
+        white-space: nowrap !important;
+    }
+
+    .navbar-subtitle {
+        font-size: 11px !important;
+        white-space: nowrap !important;
+    }
+
+    .navbar-right {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-wrap: wrap !important;
+
+        justify-content: flex-start !important;
+
+        gap: 7px !important;
+    }
+
+    .navbar-right a {
+        padding: 9px 13px !important;
+
+        font-size: 13px !important;
+
+        flex: 0 0 auto !important;
+    }
+
+    /* Hero */
+
+    .hero {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-top: 10px !important;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 48px !important;
+        line-height: 1.08 !important;
+        letter-spacing: -2px !important;
+    }
+
+    .hero-description {
+        max-width: 100% !important;
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* About */
+
+    .about-section {
+        margin-top: 35px !important;
+        padding: 28px !important;
+    }
+
+    /* Why cards */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    /* Footer */
+
+    .footer {
+        flex-wrap: wrap !important;
+    }
+}
+
+
+/* -----------------------------------------------------
+   MOBILE PHONES
+   ----------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    /* Prevent horizontal overflow */
+
+    html,
+    body,
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"] {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Main page */
+
+    .block-container {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+
+        padding-top: 12px !important;
+        padding-bottom: 40px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =================================================
+       NAVBAR
+       ================================================= */
+
+    .navbar {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        gap: 14px !important;
+
+        padding: 15px !important;
+
+        margin: 0 0 22px 0 !important;
+
+        border-radius: 15px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .navbar-left {
+        width: 100% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        gap: 8px !important;
+
+        overflow: hidden !important;
+    }
+
+    .navbar-brand {
+        font-size: 18px !important;
+
+        line-height: 1.2 !important;
+
+        white-space: nowrap !important;
+    }
+
+    .navbar-divider {
+        font-size: 15px !important;
+    }
+
+    .navbar-subtitle {
+        display: none !important;
+    }
+
+
+    /* Navigation links */
+
+    .navbar-right {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 7px !important;
+    }
+
+    .navbar-right a {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        padding: 10px 6px !important;
+
+        font-size: 12px !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =================================================
+       HERO
+       ================================================= */
+
+    .hero {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding-top: 5px !important;
+
+        padding-bottom: 20px !important;
+
+        margin-bottom: 30px !important;
+    }
+
+    .hero-badge {
+        max-width: 100% !important;
+
+        padding: 8px 12px !important;
+
+        margin-bottom: 18px !important;
+
+        font-size: 11px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 36px !important;
+
+        line-height: 1.08 !important;
+
+        letter-spacing: -1.5px !important;
+
+        margin-bottom: 16px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+
+        line-height: 1.15 !important;
+    }
+
+    h3 {
+        font-size: 18px !important;
+    }
+
+    .hero-description {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.65 !important;
+
+        margin-top: 10px !important;
+    }
+
+
+    /* =================================================
+       TRUST CHIPS
+       ================================================= */
+
+    .trust-row {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 8px !important;
+
+        margin-top: 18px !important;
+    }
+
+    .trust-chip {
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+
+        padding: 10px 12px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    /* =================================================
+       ABOUT SECTION
+       ================================================= */
+
+    .about-section {
+        width: 100% !important;
+
+        margin-top: 25px !important;
+
+        margin-bottom: 35px !important;
+
+        padding: 22px !important;
+
+        border-radius: 17px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .section-label {
+        font-size: 10px !important;
+
+        letter-spacing: 1.4px !important;
+    }
+
+    .about-text {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* =================================================
+       WHY TRUSTLENS CARDS
+       ================================================= */
+
+    .why-section {
+        margin-top: 35px !important;
+
+        margin-bottom: 35px !important;
+    }
+
+    .why-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 12px !important;
+
+        width: 100% !important;
+    }
+
+    .why-card {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 16px !important;
+    }
+
+    .why-icon {
+        font-size: 25px !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    .why-card h3 {
+        font-size: 17px !important;
+    }
+
+    .why-card p {
+        font-size: 13px !important;
+
+        line-height: 1.6 !important;
+    }
+
+
+    /* =================================================
+       STREAMLIT COLUMNS
+       ================================================= */
+
+    [data-testid="column"] {
+        min-width: 0 !important;
+
+        width: 100% !important;
+    }
+
+
+    /* =================================================
+       BUTTONS
+       ================================================= */
+
+    [data-testid="stButton"] {
+        width: 100% !important;
+    }
+
+    [data-testid="stButton"] > button,
+    .stButton > button,
+    [data-testid="stDownloadButton"] > button,
+    .stDownloadButton > button {
+        width: 100% !important;
+
+        min-height: 48px !important;
+
+        font-size: 14px !important;
+
+        border-radius: 12px !important;
+    }
+
+
+    /* =================================================
+       TEXT INPUT
+       ================================================= */
+
+    [data-testid="stTextInput"],
+    [data-testid="stTextArea"] {
+        width: 100% !important;
+    }
+
+    [data-testid="stTextArea"] textarea {
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 14px !important;
+    }
+
+    [data-testid="stTextInput"] input {
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 14px !important;
+    }
+
+
+    /* =================================================
+       METRIC CARDS
+       ================================================= */
+
+    .metric-card {
+        width: 100% !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 16px !important;
+    }
+
+    .metric-value {
+        font-size: 30px !important;
+    }
+
+    .metric-title {
+        font-size: 12px !important;
+    }
+
+
+    /* =================================================
+       ACTION CARDS
+       ================================================= */
+
+    .action-card {
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .action-title {
+        font-size: 17px !important;
+    }
+
+    .action-description {
+        font-size: 13px !important;
+    }
+
+
+    /* =================================================
+       FOOTER
+       ================================================= */
+
+    .footer {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        gap: 10px !important;
+
+        margin-top: 50px !important;
+
+        padding-top: 20px !important;
+    }
+
+
+    /* =================================================
+       TABLES
+       ================================================= */
+
+    [data-testid="stDataFrame"],
+    [data-testid="stTable"] {
+        width: 100% !important;
+
+        overflow-x: auto !important;
+    }
+
+
+    /* =================================================
+       ALERTS / INFO BOXES
+       ================================================= */
+
+    [data-testid="stAlert"] {
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 13px !important;
+    }
+
+
+    /* =================================================
+       HEADINGS
+       ================================================= */
+
+    .stMarkdown h1 {
+        font-size: 36px !important;
+    }
+
+    .stMarkdown h2 {
+        font-size: 27px !important;
+    }
+
+    .stMarkdown h3 {
+        font-size: 18px !important;
+    }
+}
+
+
+/* -----------------------------------------------------
+   VERY SMALL PHONES
+   ----------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+    .block-container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .navbar {
+        padding: 12px !important;
+    }
+
+    .navbar-brand {
+        font-size: 17px !important;
+    }
+
+    .navbar-right {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .navbar-right a {
+        font-size: 11px !important;
+
+        padding: 9px 4px !important;
+    }
+
+    .hero h1,
+    h1 {
+        font-size: 32px !important;
+    }
+
+    h2 {
+        font-size: 25px !important;
+    }
+
+    .about-section {
+        padding: 18px !important;
+    }
+
+    .why-card {
+        padding: 17px !important;
+    }
+}
