@@ -2392,9 +2392,101 @@
         z-index: 99999 !important;
     }
 
+/* =====================================================
+   MOBILE NAVIGATION
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    /* Navbar */
+    .navbar {
+        position: relative !important;
+
+        width: 100% !important;
+        min-height: 72px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 14px 16px !important;
+        margin-bottom: 25px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: visible !important;
+
+        z-index: 10000 !important;
+    }
+
+
+    /* Left side */
+    .navbar-left {
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 10px !important;
+
+        min-width: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* TrustLens AI */
+    .navbar-brand {
+        font-size: 20px !important;
+        font-weight: 800 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* Hide subtitle and divider */
+    .navbar-subtitle,
+    .navbar-divider {
+        display: none !important;
+    }
+
 
     /* =================================================
-       MOBILE NAVIGATION BUTTONS
+       DROPDOWN MENU
+       ================================================= */
+
+    .navbar-right {
+        position: absolute !important;
+
+        top: calc(100% + 8px) !important;
+        right: 12px !important;
+
+        width: 245px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        gap: 8px !important;
+
+        padding: 10px !important;
+
+        box-sizing: border-box !important;
+
+        background: #111827 !important;
+
+        border: 1px solid rgba(96, 165, 250, 0.35) !important;
+
+        border-radius: 16px !important;
+
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.55) !important;
+
+        z-index: 99999 !important;
+    }
+
+
+    /* =================================================
+       MOBILE MENU BUTTONS
        ================================================= */
 
     .navbar-right a {
@@ -2448,30 +2540,10 @@
 
 
     /* =================================================
-       PREVENT MENU FROM BEING TRANSPARENT
-       ================================================= */
-
-    .navbar-right,
-    .navbar-right a,
-    .navbar-right a * {
-        opacity: 1 !important;
-    }
-
-
-    /* =================================================
-       HERO SHOULD STAY BEHIND MENU
+       HERO
        ================================================= */
 
     .hero {
-        position: relative !important;
-
-        z-index: 1 !important;
-    }
-
-
-    .hero-badge,
-    .hero h1,
-    .hero-description {
         position: relative !important;
 
         z-index: 1 !important;
