@@ -1,5 +1,7 @@
 <div class="navbar">
 
+    <!-- Desktop / Mobile top section -->
+
     <div class="navbar-top">
 
         <div class="navbar-left">
@@ -18,19 +20,43 @@
 
         </div>
 
-        <!-- Mobile menu button -->
-        <button
-            class="mobile-menu-button"
-            onclick="toggleTrustLensMenu()"
-            type="button"
-        >
-            ☰
-        </button>
+
+        <!-- Mobile menu -->
+
+        <details class="mobile-menu">
+
+            <summary>
+                ☰
+            </summary>
+
+            <div class="mobile-menu-links">
+
+                <a href="/?page=detect">
+                    Detect
+                </a>
+
+                <a href="/?page=batch">
+                    Batch
+                </a>
+
+                <a href="/?page=dashboard">
+                    Dashboard
+                </a>
+
+                <a href="/?page=insights">
+                    Insights
+                </a>
+
+            </div>
+
+        </details>
 
     </div>
 
 
-    <div class="navbar-right" id="trustlens-menu">
+    <!-- Desktop navigation -->
+
+    <div class="navbar-right">
 
         <a href="/?page=detect">
             Detect
@@ -51,30 +77,3 @@
     </div>
 
 </div>
-
-
-<script>
-
-function toggleTrustLensMenu() {
-
-    const menu =
-        document.getElementById("trustlens-menu");
-
-    const button =
-        document.querySelector(".mobile-menu-button");
-
-    menu.classList.toggle("mobile-menu-open");
-
-    if (menu.classList.contains("mobile-menu-open")) {
-
-        button.innerHTML = "✕";
-
-    } else {
-
-        button.innerHTML = "☰";
-
-    }
-
-}
-
-</script>
