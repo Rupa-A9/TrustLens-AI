@@ -1,7 +1,6 @@
 # 🛡️ TrustLens AI
 
 <p align="center">
-  <img src="https://img.shields.io/badge/TrustLens-AI-6C63FF?style=for-the-badge&logo=shield&logoColor=white" alt="TrustLens AI">
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Streamlit-1.61.1-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
   <img src="https://img.shields.io/badge/Machine%20Learning-Linear%20SVM-orange?style=for-the-badge" alt="Linear SVM">
@@ -18,20 +17,8 @@
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/LIVE%20APPLICATION-OPEN%20TRUSTLENS%20AI-FF4B4B?style=for-the-badge" alt="Live Application">
+    <img src="https://img.shields.io/badge/LIVE%20APPLICATION-OPEN%20TRUSTLENS%20AI-FF4B4B?style=for-the-badge">
   </a>
-</p>
-
----
-
-## Live Application
-
-<p align="center">
-
-<a href="https://trustlens-ai-rupa.streamlit.app/">
-  <strong>Open TrustLens AI</strong>
-</a>
-
 </p>
 
 ---
@@ -245,15 +232,6 @@ Generate Report
 The **Batch Detection** page allows users to upload a CSV containing
 multiple product reviews.
 
-Example:
-
-```csv
-review
-"Excellent product and fast delivery."
-"Completely useless product."
-"Works exactly as described."
-```
-
 The application processes the reviews using the same trained prediction
 pipeline.
 
@@ -343,18 +321,6 @@ The analysis includes:
 * Review length
 * Word cloud analysis
 
-Generated outputs include:
-
-```text
-outputs/
-├── label_distribution.png
-├── rating_distribution.png
-├── category_distribution.png
-├── missing_values.png
-├── review_length_distribution.png
-└── wordcloud.png
-```
-
 ---
 
 ## Technology Stack
@@ -411,12 +377,9 @@ TrustLens-AI/
 ├── components/
 │   ├── hero.html
 │   ├── hero.py
-│   ├── metrics.py
 │   ├── navbar.html
 │   ├── navbar.py
-│   ├── quick_actions.py
-│   └── workflow.py
-│
+|
 ├── data/
 │   └── processed review data
 │
@@ -446,7 +409,6 @@ TrustLens-AI/
 │   ├── load_css.py
 │   ├── pdf.py
 │   ├── preprocess.py
-│   └── svg.py
 │
 ├── app.py
 ├── config.py
@@ -611,162 +573,10 @@ TrustLens AI is deployed using **Streamlit Community Cloud**.
 
 ---
 
-## Application Screenshots
-
-> Add your actual screenshots inside a `screenshots/` folder in the
-> repository and uncomment the image paths below.
-
-### Home Page
-
-<!--
-![TrustLens AI Home](screenshots/home.png)
--->
-
-### Detection Page
-
-<!--
-![Review Detection](screenshots/detect.png)
--->
-
-### Batch Detection
-
-<!--
-![Batch Detection](screenshots/batch.png)
--->
-
-### Dashboard
-
-<!--
-![Dashboard](screenshots/dashboard.png)
--->
-
-### Model Insights
-
-<!--
-![Model Insights](screenshots/insights.png)
--->
-
----
-
-## Example Prediction
-
-### Example Input
-
-```text
-Recvd intact, heated after the initial start but back to normal,
-battery back up is great ita been 3 days since my kid is using it
-for games and youtube works well.
-```
-
-### Example Output
-
-```text
-Prediction:
-Fake / Suspicious Review
-
-Confidence:
-53.25%
-
-Review Statistics:
-Characters: 205
-Words: 39
-Lines: 2
-
-Processing Time:
-0.384 seconds
-```
-
-> Model predictions are based on learned patterns and should not be treated
-> as definitive proof that a review is fraudulent.
-
----
-
-## Responsible Use
-
-TrustLens AI is a machine-learning classification system.
-
-A prediction of:
-
-```text
-Fake / Suspicious Review
-```
-
-does not automatically prove that a review is fraudulent.
-
-The system should be treated as a **decision-support tool**, rather than the
-sole basis for moderation, business, or customer decisions.
-
----
-
-## Limitations
-
-Current limitations include:
-
-* Predictions depend on the quality of the training data.
-* The model may misclassify some genuine reviews.
-* Some sophisticated fake reviews may be difficult to detect.
-* Textual patterns are the primary source of information.
-* Reviewer behavior and account history are not currently considered.
-* Confidence values should not be interpreted as guaranteed probabilities.
-* Dataset bias can affect model performance.
-
----
-
-## Future Improvements
-
-Possible future improvements include:
-
-* [ ] Transformer-based models such as BERT
-* [ ] Sentiment analysis
-* [ ] Duplicate review detection
-* [ ] Reviewer behavior analysis
-* [ ] Explainable AI
-* [ ] Ensemble machine-learning models
-* [ ] Multilingual review detection
-* [ ] Database integration
-* [ ] User authentication
-* [ ] Advanced batch analytics
-* [ ] Automated model retraining
-* [ ] Review monitoring and alerts
-
----
-
-## Future Architecture
-
-```text
-                  Review Data
-                       │
-          ┌────────────┴────────────┐
-          │                         │
-          ▼                         ▼
-      Text Data              Reviewer Metadata
-          │                         │
-          ▼                         ▼
-       NLP Model              Behavior Analysis
-          │                         │
-          └────────────┬────────────┘
-                       ▼
-                Ensemble Model
-                       │
-                       ▼
-              Explainable Result
-                       │
-          ┌────────────┴────────────┐
-          ▼                         ▼
-       Prediction               Confidence
-          │                         │
-          └────────────┬────────────┘
-                       ▼
-                TrustLens AI
-```
-
----
 
 ## Author
 
-### 🛡️ Rupa-A9
-
-Computer Science & Engineering
+### Siripurapu Rupasri - Rupa-A9
 
 ---
 
