@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/TrustLens-AI-6C63FF?style=for-the-badge&logo=shield&logoColor=white" alt="TrustLens AI">
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Streamlit-1.61.1-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
-  <img src="https://img.shields.io/badge/ML-Linear%20SVM-orange?style=for-the-badge" alt="Linear SVM">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Linear%20SVM-orange?style=for-the-badge" alt="Linear SVM">
 </p>
 
 <h3 align="center">
@@ -18,38 +18,28 @@
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/LIVE%20DEMO-Open%20TrustLens%20AI-FF4B4B?style=for-the-badge" alt="Live Demo">
-  </a>
-  &nbsp;
-  <a href="https://github.com/Rupa-A9/TrustLens-AI">
-    <img src="https://img.shields.io/badge/SOURCE%20CODE-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub">
+    <img src="https://img.shields.io/badge/LIVE%20APPLICATION-OPEN%20TRUSTLENS%20AI-FF4B4B?style=for-the-badge" alt="Live Application">
   </a>
 </p>
 
 ---
 
-## 🌐 Live Demo
-
-###  Try TrustLens AI
+## Live Application
 
 <p align="center">
-  <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/OPEN%20LIVE%20APPLICATION-TrustLens%20AI-FF4B4B?style=for-the-badge" alt="Open Live Application">
-  </a>
+
+<a href="https://trustlens-ai-rupa.streamlit.app/">
+  <strong>Open TrustLens AI</strong>
+</a>
+
 </p>
-
-**Live Application:**  
-https://trustlens-ai-rupa.streamlit.app/
-
-**GitHub Repository:**  
-https://github.com/Rupa-A9/TrustLens-AI
 
 ---
 
-#  About The Project
+## About The Project
 
-**TrustLens AI** is a machine-learning powered web application designed to
-identify potentially fake or suspicious product reviews.
+**🛡️ TrustLens AI** is a machine-learning powered web application designed
+to identify potentially fake or suspicious product reviews.
 
 The system uses:
 
@@ -62,11 +52,11 @@ The system uses:
 
 Users can analyze individual reviews, process multiple reviews through CSV
 files, view model performance, understand the machine-learning pipeline,
-and download PDF analysis reports.
+and generate downloadable PDF analysis reports.
 
 ---
 
-#  Problem Statement
+## Problem Statement
 
 Online product reviews strongly influence purchasing decisions.
 
@@ -82,7 +72,7 @@ from labeled review data and using those patterns to classify new reviews.
 
 ---
 
-#  Solution
+## Solution
 
 TrustLens AI processes review text through a machine-learning pipeline:
 
@@ -118,36 +108,36 @@ TrustLens AI processes review text through a machine-learning pipeline:
 
 ---
 
-#  Key Features
+## Key Features
 
-| Feature                    | Description                                  |
-| -------------------------- | -------------------------------------------- |
-|  Single Review Detection | Analyze an individual product review         |
-|  Batch Detection         | Upload a CSV and analyze multiple reviews    |
-|  TF-IDF                  | Convert review text into numerical features  |
-|  Linear SVM              | Classify reviews using the trained model     |
-|  Dashboard               | View model performance metrics               |
-|  Model Insights          | Understand the machine-learning pipeline     |
-|  PDF Reports             | Download review analysis reports             |
-|  Review Statistics       | Characters, words, lines and processing time |
-|  Fast Prediction          | Real-time review classification              |
-|  Cloud Deployment        | Deployed using Streamlit Community Cloud     |
+| Feature                 | Description                                  |
+| ----------------------- | -------------------------------------------- |
+| Single Review Detection | Analyze an individual product review         |
+| Batch Detection         | Upload a CSV and analyze multiple reviews    |
+| TF-IDF                  | Convert review text into numerical features  |
+| Linear SVM              | Classify reviews using the trained model     |
+| Dashboard               | View model performance metrics               |
+| Model Insights          | Understand the machine-learning pipeline     |
+| PDF Reports             | Download review analysis reports             |
+| Review Statistics       | Characters, words, lines and processing time |
+| Fast Prediction         | Real-time review classification              |
+| Cloud Deployment        | Deployed using Streamlit Community Cloud     |
 
 ---
 
-#  Model Performance
+## Model Performance
 
 The trained Linear SVM model achieved the following evaluation results:
 
 <div align="center">
 
-| Metric        |         Result |
-| ------------- | -------------: |
-|  Accuracy     |     **89.16%** |
-|  Precision    |     **89.05%** |
-|  Recall       |     **89.29%** |
-|  F1 Score     |     **89.17%** |
-|  Best Model   | **Linear SVM** |
+| Metric     |         Result |
+| ---------- | -------------: |
+| Accuracy   |     **89.16%** |
+| Precision  |     **89.05%** |
+| Recall     |     **89.29%** |
+| F1 Score   |     **89.17%** |
+| Best Model | **Linear SVM** |
 
 </div>
 
@@ -156,9 +146,9 @@ The trained Linear SVM model achieved the following evaluation results:
 
 ---
 
-#  Machine Learning Pipeline
+## Machine Learning Pipeline
 
-## 01 — Natural Language Processing
+### 01 — Natural Language Processing
 
 The application receives human-written product review text.
 
@@ -172,15 +162,15 @@ The text is processed before being passed to the machine-learning model.
 
 ---
 
-## 02 — TF-IDF Vectorization
+### 02 — TF-IDF Vectorization
 
 TF-IDF converts text into numerical feature vectors.
 
-### TF — Term Frequency
+#### TF — Term Frequency
 
 Measures how frequently a word occurs within a particular review.
 
-### IDF — Inverse Document Frequency
+#### IDF — Inverse Document Frequency
 
 Measures how informative a word is across the review dataset.
 
@@ -196,7 +186,7 @@ Numerical Feature Vector
 
 ---
 
-## 03 — Linear SVM
+### 03 — Linear SVM
 
 The TF-IDF feature vector is passed to the trained Linear Support Vector
 Machine classifier.
@@ -213,7 +203,7 @@ The model returns the predicted review category.
 
 ---
 
-#  Single Review Detection
+## Single Review Detection
 
 The **Detect** page allows users to enter a product review and analyze it
 in real time.
@@ -250,7 +240,7 @@ Generate Report
 
 ---
 
-#  Batch Detection
+## Batch Detection
 
 The **Batch Detection** page allows users to upload a CSV containing
 multiple product reviews.
@@ -271,7 +261,7 @@ This allows multiple reviews to be analyzed efficiently.
 
 ---
 
-#  Dashboard
+## Dashboard
 
 The **Dashboard** provides an overview of the trained model.
 
@@ -287,7 +277,7 @@ It includes:
 
 ---
 
-#  Model Insights
+## Model Insights
 
 The **Insights** page explains the complete TrustLens AI machine-learning
 pipeline.
@@ -317,7 +307,7 @@ The page also explains:
 
 ---
 
-#  PDF Report Generation
+## PDF Report Generation
 
 After analyzing a review, TrustLens AI can generate a downloadable PDF
 report.
@@ -337,7 +327,7 @@ PDF generation is implemented using **ReportLab**.
 
 ---
 
-#  Exploratory Data Analysis
+## Exploratory Data Analysis
 
 The project contains an EDA pipeline for analyzing the review dataset.
 
@@ -367,17 +357,17 @@ outputs/
 
 ---
 
-#  Technology Stack
+## Technology Stack
 
-## Programming
+### Programming
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
 
-## Web Application
+### Web Application
 
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square\&logo=streamlit\&logoColor=white)
 
-## Machine Learning
+### Machine Learning
 
 ![Scikit Learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square\&logo=scikit-learn\&logoColor=white)
 
@@ -385,25 +375,25 @@ outputs/
 
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square\&logo=pandas\&logoColor=white)
 
-## NLP
+### NLP
 
 ![NLTK](https://img.shields.io/badge/NLTK-154F3C?style=flat-square)
 
 ![TF-IDF](https://img.shields.io/badge/TF--IDF-Text%20Vectorization-blue?style=flat-square)
 
-## Visualization
+### Visualization
 
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)
 
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square\&logo=plotly\&logoColor=white)
 
-## PDF Reporting
+### PDF Reporting
 
 ![ReportLab](https://img.shields.io/badge/ReportLab-PDF-red?style=flat-square)
 
 ---
 
-#  Project Structure
+## Project Structure
 
 ```text
 TrustLens-AI/
@@ -416,12 +406,16 @@ TrustLens-AI/
 │       ├── components.css
 │       ├── globals.css
 │       ├── pages.css
+│       └── style.css
 │
 ├── components/
 │   ├── hero.html
 │   ├── hero.py
+│   ├── metrics.py
 │   ├── navbar.html
 │   ├── navbar.py
+│   ├── quick_actions.py
+│   └── workflow.py
 │
 ├── data/
 │   └── processed review data
@@ -452,6 +446,7 @@ TrustLens-AI/
 │   ├── load_css.py
 │   ├── pdf.py
 │   ├── preprocess.py
+│   └── svg.py
 │
 ├── app.py
 ├── config.py
@@ -464,23 +459,23 @@ TrustLens-AI/
 
 ---
 
-# ⚙️ Installation
+## Installation
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Rupa-A9/TrustLens-AI.git
 ```
 
-## 2. Enter the Project Directory
+### 2. Enter the Project Directory
 
 ```bash
 cd TrustLens-AI
 ```
 
-## 3. Create a Virtual Environment
+### 3. Create a Virtual Environment
 
-### Windows
+#### Windows
 
 ```bash
 python -m venv venv
@@ -492,7 +487,7 @@ Activate:
 venv\Scripts\activate
 ```
 
-### macOS / Linux
+#### macOS / Linux
 
 ```bash
 python3 -m venv venv
@@ -506,7 +501,7 @@ source venv/bin/activate
 
 ---
 
-# 📦 Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -514,7 +509,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run Locally
+## Run Locally
 
 Start the Streamlit application:
 
@@ -530,7 +525,7 @@ http://localhost:8501
 
 ---
 
-# 🧪 Required Model Files
+## Required Model Files
 
 The prediction system requires:
 
@@ -547,45 +542,36 @@ review text into the feature representation expected by the classifier.
 
 ---
 
-# ☁️ Deployment
+## Deployment
 
 TrustLens AI is deployed using **Streamlit Community Cloud**.
 
 ### Deployment Architecture
 
 ```text
-                    GitHub
-                      │
-                      ▼
-              ┌───────────────┐
-              │ TrustLens-AI  │
-              │  Repository   │
-              └───────┬───────┘
-                      │
-                      ▼
-              ┌───────────────┐
-              │ Streamlit     │
-              │ Community     │
-              │ Cloud         │
-              └───────┬───────┘
-                      │
-                      ▼
-              ┌───────────────┐
-              │  Live Web App │
-              └───────────────┘
+                    GitHub Repository
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │   TrustLens AI  │
+                  │    Project      │
+                  └────────┬────────┘
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │    Streamlit    │
+                  │ Community Cloud │
+                  └────────┬────────┘
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │   Live Web App  │
+                  └─────────────────┘
 ```
-
-###  Launch Application
-
-<p align="center">
-  <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/LAUNCH%20TRUSTLENS%20AI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Launch TrustLens AI">
-  </a>
-</p>
 
 ---
 
-# Complete Application Workflow
+## Complete Application Workflow
 
 ```text
                          ┌─────────────────┐
@@ -625,8 +611,94 @@ TrustLens AI is deployed using **Streamlit Community Cloud**.
 
 ---
 
+## Application Screenshots
 
-#  Limitations
+> Add your actual screenshots inside a `screenshots/` folder in the
+> repository and uncomment the image paths below.
+
+### Home Page
+
+<!--
+![TrustLens AI Home](screenshots/home.png)
+-->
+
+### Detection Page
+
+<!--
+![Review Detection](screenshots/detect.png)
+-->
+
+### Batch Detection
+
+<!--
+![Batch Detection](screenshots/batch.png)
+-->
+
+### Dashboard
+
+<!--
+![Dashboard](screenshots/dashboard.png)
+-->
+
+### Model Insights
+
+<!--
+![Model Insights](screenshots/insights.png)
+-->
+
+---
+
+## Example Prediction
+
+### Example Input
+
+```text
+Recvd intact, heated after the initial start but back to normal,
+battery back up is great ita been 3 days since my kid is using it
+for games and youtube works well.
+```
+
+### Example Output
+
+```text
+Prediction:
+Fake / Suspicious Review
+
+Confidence:
+53.25%
+
+Review Statistics:
+Characters: 205
+Words: 39
+Lines: 2
+
+Processing Time:
+0.384 seconds
+```
+
+> Model predictions are based on learned patterns and should not be treated
+> as definitive proof that a review is fraudulent.
+
+---
+
+## Responsible Use
+
+TrustLens AI is a machine-learning classification system.
+
+A prediction of:
+
+```text
+Fake / Suspicious Review
+```
+
+does not automatically prove that a review is fraudulent.
+
+The system should be treated as a **decision-support tool**, rather than the
+sole basis for moderation, business, or customer decisions.
+
+---
+
+## Limitations
 
 Current limitations include:
 
@@ -640,7 +712,7 @@ Current limitations include:
 
 ---
 
-#  Future Improvements
+## Future Improvements
 
 Possible future improvements include:
 
@@ -659,7 +731,7 @@ Possible future improvements include:
 
 ---
 
-#  Future Architecture
+## Future Architecture
 
 ```text
                   Review Data
@@ -690,39 +762,11 @@ Possible future improvements include:
 
 ---
 
-#  Author
+## Author
 
-## Rupa-A9
+### 🛡️ Rupa-A9
 
 Computer Science & Engineering
-
-<p>
-  <a href="https://github.com/Rupa-A9">
-    <img src="https://img.shields.io/badge/GitHub-Rupa--A9-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-</p>
-
----
-
-# ⭐ Support
-
-If you find this project useful, consider giving the repository a ⭐.
-
-<p align="center">
-
-<a href="https://github.com/Rupa-A9/TrustLens-AI">
-  <img src="https://img.shields.io/github/stars/Rupa-A9/TrustLens-AI?style=for-the-badge&logo=github&label=STARS" alt="GitHub Stars">
-</a>
-
-<a href="https://github.com/Rupa-A9/TrustLens-AI">
-  <img src="https://img.shields.io/github/forks/Rupa-A9/TrustLens-AI?style=for-the-badge&logo=github&label=FORKS" alt="GitHub Forks">
-</a>
-
-<a href="https://github.com/Rupa-A9/TrustLens-AI/issues">
-  <img src="https://img.shields.io/github/issues/Rupa-A9/TrustLens-AI?style=for-the-badge&logo=github&label=ISSUES" alt="GitHub Issues">
-</a>
-
-</p>
 
 ---
 
@@ -734,11 +778,4 @@ Analyze Reviews. Detect Deception. Build Trust.
 
 Built with Python • NLP • TF-IDF • Linear SVM • Streamlit
 
-<br><br>
-
-<a href="https://trustlens-ai-rupa.streamlit.app/">
-   Open Live Application
-</a>
-
-```
-
+</p>
