@@ -1,0 +1,149 @@
+/* ==========================================================
+   PAGE SPECIFIC STYLES
+========================================================== */
+
+/* ===========================
+   HOME PAGE
+=========================== */
+
+.home-page{
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+}
+
+/* ===========================
+   DETECT PAGE
+=========================== */
+
+.detect-container{
+    margin-top:30px;
+}
+
+.detect-header{
+    margin-bottom:35px;
+}
+
+.detect-title{
+    font-size:42px;
+    font-weight:700;
+    color:white;
+    margin-bottom:12px;
+}
+
+.detect-subtitle{
+    color:var(--muted);
+    font-size:18px;
+    max-width:700px;
+}
+
+.review-input{
+    margin-top:25px;
+}
+
+.review-result{
+    margin-top:40px;
+}
+
+.result-card{
+    padding:28px;
+}
+
+.result-success{
+    border:1px solid rgba(34,197,94,.35);
+    box-shadow:0 0 30px rgba(34,197,94,.10);
+}
+
+.result-danger{
+    border:1px solid rgba(239,68,68,.35);
+    box-shadow:0 0 30px rgba(239,68,68,.10);
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.chart-card{
+    padding:24px;
+    margin-top:25px;
+}
+
+/* ===========================
+   BATCH PAGE
+=========================== */
+
+.upload-card{
+    padding:30px;
+}
+
+.download-card{
+    padding:30px;
+    margin-top:25px;
+}
+
+/* ===========================
+   ABOUT PAGE
+=========================== */
+
+.timeline{
+    margin-top:35px;
+}
+
+.tech-stack{
+    margin-top:35px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px){
+
+    h1{
+        font-size:48px;
+    }
+
+    .detect-title{
+        font-size:34px;
+    }
+
+    .section{
+        margin:60px 0;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .block-container{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    h1{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .trust-row{
+        gap:12px;
+    }
+
+    .metric-card{
+        height:auto;
+        padding:24px;
+    }
+
+    .action-card{
+        height:auto;
+    }
+
+}
