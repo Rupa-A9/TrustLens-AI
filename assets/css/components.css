@@ -2287,27 +2287,194 @@
 
 }
 
-@media (max-width: 600px) {
+/* =====================================================
+   TRUSTLENS AI - MOBILE NAVBAR FIX
+   ===================================================== */
 
-    /* 3-lines button hover color */
-    .mobile-menu summary:hover {
-        background: #2563eb !important;
-        color: #ffffff !important;
-        border-color: #3b82f6 !important;
+@media (max-width: 850px) {
+
+    /* Main navbar */
+    .navbar {
+        position: relative !important;
+
+        width: 100% !important;
+        min-height: 72px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 14px 16px !important;
+
+        margin-bottom: 25px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: visible !important;
+
+        z-index: 1000 !important;
     }
 
-    /* Mobile navigation buttons */
-    .mobile-menu-links a {
+
+    /* Left side */
+    .navbar-left {
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+
+        min-width: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* TrustLens name */
+    .navbar-brand {
+        font-size: 20px !important;
+
+        font-weight: 800 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* Hide subtitle on mobile */
+    .navbar-subtitle,
+    .navbar-divider {
+        display: none !important;
+    }
+
+
+    /* =================================================
+       MOBILE MENU
+       ================================================= */
+
+    .navbar-right {
+        position: absolute !important;
+
+        top: calc(100% + 8px) !important;
+
+        right: 14px !important;
+
+        width: 250px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        justify-content: flex-start !important;
+
+        gap: 8px !important;
+
+        padding: 10px !important;
+
+        box-sizing: border-box !important;
+
+        background: #111827 !important;
+
+        border: 1px solid rgba(96, 165, 250, 0.30) !important;
+
+        border-radius: 16px !important;
+
+        box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.55) !important;
+
+        backdrop-filter: blur(20px) !important;
+
+        -webkit-backdrop-filter: blur(20px) !important;
+
+        z-index: 99999 !important;
+    }
+
+
+    /* =================================================
+       MOBILE NAVIGATION BUTTONS
+       ================================================= */
+
+    .navbar-right a {
+        width: 100% !important;
+
+        min-height: 54px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        padding: 0 22px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 12px !important;
+
         background: #2563eb !important;
-        color: #ffffff !important;
+
         border: 1px solid #3b82f6 !important;
+
+        color: #ffffff !important;
+
+        font-size: 16px !important;
+
+        font-weight: 700 !important;
+
+        text-decoration: none !important;
+
+        white-space: nowrap !important;
+
+        opacity: 1 !important;
     }
 
-    /* Keep same blue when hovering */
-    .mobile-menu-links a:hover {
+
+    /* Hover */
+    .navbar-right a:hover {
         background: #2563eb !important;
-        color: #ffffff !important;
+
         border-color: #60a5fa !important;
+
+        color: #ffffff !important;
+
+        transform: none !important;
+
+        box-shadow:
+            0 6px 18px rgba(37, 99, 235, 0.30) !important;
+    }
+
+
+    /* =================================================
+       PREVENT MENU FROM BEING TRANSPARENT
+       ================================================= */
+
+    .navbar-right,
+    .navbar-right a,
+    .navbar-right a * {
+        opacity: 1 !important;
+    }
+
+
+    /* =================================================
+       HERO SHOULD STAY BEHIND MENU
+       ================================================= */
+
+    .hero {
+        position: relative !important;
+
+        z-index: 1 !important;
+    }
+
+
+    .hero-badge,
+    .hero h1,
+    .hero-description {
+        position: relative !important;
+
+        z-index: 1 !important;
     }
 
 }
