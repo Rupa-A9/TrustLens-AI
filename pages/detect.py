@@ -17,6 +17,24 @@ st.set_page_config(
 
 load_css()
 
+# =========================================================
+# BACK TO HOME
+# =========================================================
+
+back_col1, back_col2 = st.columns([11, 1])
+
+with back_col2:
+
+    with st.container(key="back_home_button"):
+
+        if st.button(
+            "←",
+            key="back_home",
+            help="Back to Home",
+            use_container_width=True,
+        ):
+            st.switch_page("app.py")
+
 
 # =========================================================
 # SAMPLE REVIEWS
@@ -513,15 +531,3 @@ if result is not None:
         )
 
 
-# =========================================================
-# BACK TO HOME
-# =========================================================
-
-st.markdown("")
-
-if st.button(
-    "← Back to Home",
-    use_container_width=True,
-):
-
-    st.switch_page("app.py")
