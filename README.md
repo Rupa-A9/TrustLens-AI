@@ -17,7 +17,7 @@
 
 <p align="center">
   <a href="https://trustlens-ai-rupa.streamlit.app/">
-    <img src="https://img.shields.io/badge/OPEN%20LIVE%20APPLICATION-FF4B4B?style=for-the-badge">
+    <img src="https://img.shields.io/badge/OPEN%20LIVE%20APPLICATION-1E3A8A?style=for-the-badge">
   </a>
 </p>
 
