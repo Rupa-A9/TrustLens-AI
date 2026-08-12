@@ -2286,26 +2286,28 @@
     }
 
 }
-/* =====================================================
-   MOBILE MENU BUTTON COLORS
-   ===================================================== */
 
 @media (max-width: 600px) {
 
+    /* 3-lines button */
+    .mobile-menu summary {
+        background: #151f32 !important;
+        color: #ffffff !important;
+        border: 1px solid #263653 !important;
+    }
+
+    /* Menu buttons — SAME background */
     .mobile-menu-links a {
-        background: #172554 !important;
+        background: #151f32 !important;
         color: #ffffff !important;
-        border: 1px solid #2563eb !important;
+        border: 1px solid #263653 !important;
     }
 
+    /* Hover */
     .mobile-menu-links a:hover {
-        background: #2563eb !important;
+        background: #151f32 !important;
         color: #ffffff !important;
-    }
-
-    .mobile-menu-links a:active {
-        background: #1d4ed8 !important;
-        color: #ffffff !important;
+        border-color: #3b82f6 !important;
     }
 
 }
