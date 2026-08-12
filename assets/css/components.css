@@ -2201,3 +2201,88 @@
     }
 
 }
+/* =====================================================
+   MOBILE MENU - DARK CLEAR BUTTONS
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .mobile-menu[open] .mobile-menu-links {
+        background: #0b1220 !important;
+
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+
+        box-shadow:
+            0 18px 45px rgba(0, 0, 0, 0.55) !important;
+
+        padding: 10px !important;
+    }
+
+
+    .mobile-menu-links a {
+        display: block !important;
+
+        width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        padding: 12px 14px !important;
+
+        background: #151f32 !important;
+
+        color: #ffffff !important;
+
+        border: 1px solid #263653 !important;
+
+        border-radius: 9px !important;
+
+        text-decoration: none !important;
+
+        font-size: 14px !important;
+
+        font-weight: 700 !important;
+
+        text-align: left !important;
+
+        opacity: 1 !important;
+    }
+
+
+    .mobile-menu-links a:hover {
+        background: #2563eb !important;
+
+        color: #ffffff !important;
+
+        border-color: #3b82f6 !important;
+    }
+
+
+    .mobile-menu-links a:active {
+        background: #1d4ed8 !important;
+
+        color: #ffffff !important;
+    }
+
+
+    /* Hamburger */
+
+    .mobile-menu summary {
+        color: #ffffff !important;
+
+        background: #151f32 !important;
+
+        border: 1px solid #263653 !important;
+
+        border-radius: 9px !important;
+
+        padding: 5px 9px !important;
+    }
+
+
+    .mobile-menu summary:hover {
+        background: #2563eb !important;
+
+        color: #ffffff !important;
+    }
+
+}
