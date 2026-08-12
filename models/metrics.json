@@ -1,0 +1,9 @@
+{
+    "best_model": "Linear SVM",
+    "accuracy": 0.8915543464820082,
+    "precision": 0.8904785397138628,
+    "recall": 0.8929013109077418,
+    "f1_score": 0.891688279609732,
+    "feature_count": 10000,
+    "dataset_size": 40431
+}
