@@ -12,3 +12,4 @@ models/*.joblib
 Thumbs.db
 
 .streamlit/secrets.toml
+
