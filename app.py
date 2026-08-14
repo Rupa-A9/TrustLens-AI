@@ -22,8 +22,6 @@ elif page == "batch":
 elif page == "dashboard":
     st.switch_page("pages/dashboard.py")
 
-elif page == "insights":
-    st.switch_page("pages/insights.py")
 
 else:
     show_home()
