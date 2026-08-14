@@ -92,7 +92,7 @@ TrustLens AI processes review text through a machine-learning pipeline:
                  ▼                     ▼
           Genuine Review       Fake / Suspicious
 ````
-
+```
 ---
 
 ## Key Features
@@ -103,8 +103,7 @@ TrustLens AI processes review text through a machine-learning pipeline:
 | Batch Detection         | Upload a CSV and analyze multiple reviews    |
 | TF-IDF                  | Convert review text into numerical features  |
 | Linear SVM              | Classify reviews using the trained model     |
-| Dashboard               | View model performance metrics               |
-| Model Insights          | Understand the machine-learning pipeline     |
+| Model Metrics           |View evaluation results and model information             |
 | PDF Reports             | Download review analysis reports             |
 | Review Statistics       | Characters, words, lines and processing time |
 | Fast Prediction         | Real-time review classification              |
@@ -239,49 +238,27 @@ This allows multiple reviews to be analyzed efficiently.
 
 ---
 
-## Dashboard
+## Model Metrics
 
-The **Dashboard** provides an overview of the trained model.
+The Model page provides a concise view of the machine-learning model
+used by TrustLens AI.
 
 It includes:
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Model information
-* Dataset information
-* Performance statistics
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Selected classifier
+- Dataset size
+- TF-IDF feature configuration
+- Evaluation comparison
+- Dataset preview
+- Model configuration
 
----
-
-## Model Insights
-
-The **Insights** page explains the complete TrustLens AI machine-learning
-pipeline.
-
-It covers:
-
-```text
-Natural Language Processing
-           ↓
-TF-IDF Vectorization
-           ↓
-Linear SVM
-           ↓
-Prediction
-```
-
-The page also explains:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* TF-IDF
-* Linear SVM
-* Model workflow
-* Technology stack
+The purpose of this page is to make the model evaluation and configuration
+transparent without exposing unnecessary implementation details to the
+application user.
 
 ---
 
@@ -399,7 +376,6 @@ TrustLens-AI/
 │   ├── detect.py
 │   ├── batch.py
 │   ├── dashboard.py
-│   └── insights.py
 │
 ├── services/
 │   └── predictor.py
