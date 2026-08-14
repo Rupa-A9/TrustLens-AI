@@ -58,7 +58,6 @@ TrustLens AI attempts to address this problem by learning textual patterns
 from labeled review data and using those patterns to classify new reviews.
 
 ---
-
 ## Solution
 
 TrustLens AI processes review text through a machine-learning pipeline:
@@ -91,23 +90,23 @@ TrustLens AI processes review text through a machine-learning pipeline:
                  ┌──────────┴──────────┐
                  ▼                     ▼
           Genuine Review       Fake / Suspicious
-````
 ```
+
 ---
 
 ## Key Features
 
-| Feature                 | Description                                  |
-| ----------------------- | -------------------------------------------- |
-| Single Review Detection | Analyze an individual product review         |
-| Batch Detection         | Upload a CSV and analyze multiple reviews    |
-| TF-IDF                  | Convert review text into numerical features  |
-| Linear SVM              | Classify reviews using the trained model     |
-| Model Metrics           |View evaluation results and model information             |
-| PDF Reports             | Download review analysis reports             |
-| Review Statistics       | Characters, words, lines and processing time |
-| Fast Prediction         | Real-time review classification              |
-| Cloud Deployment        | Deployed using Streamlit Community Cloud     |
+| Feature | Description |
+|---|---|
+| Single Review Detection | Analyze an individual product review |
+| Batch Detection | Upload a CSV and analyze multiple reviews |
+| TF-IDF | Convert review text into numerical features |
+| Linear SVM | Classify reviews using the trained model |
+| Model Metrics | View evaluation results and model information |
+| PDF Reports | Download review analysis reports |
+| Review Statistics | Characters, words, lines and processing time |
+| Fast Prediction | Real-time review classification |
+| Cloud Deployment | Deployed using Streamlit Community Cloud |
 
 ---
 
@@ -115,19 +114,15 @@ TrustLens AI processes review text through a machine-learning pipeline:
 
 The trained Linear SVM model achieved the following evaluation results:
 
-<div align="center">
-
-| Metric     |         Result |
-| ---------- | -------------: |
-| Accuracy   |     **89.16%** |
-| Precision  |     **89.05%** |
-| Recall     |     **89.29%** |
-| F1 Score   |     **89.17%** |
+| Metric | Result |
+|---|---:|
+| Accuracy | **89.16%** |
+| Precision | **89.05%** |
+| Recall | **89.29%** |
+| F1 Score | **89.17%** |
 | Best Model | **Linear SVM** |
 
-</div>
-
-> These values represent evaluation results from the trained model.
+> These values represent evaluation results from the trained model.  
 > Individual predictions may still be incorrect.
 
 ---
