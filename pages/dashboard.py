@@ -16,12 +16,13 @@ from utils.load_css import load_css
 # =========================================================
 
 st.set_page_config(
-    page_title="Dashboard - TrustLens AI",
+    page_title="Model | TrustLens AI",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
 
 load_css()
+
 
 # =========================================================
 # BACK TO HOME
@@ -31,16 +32,13 @@ back_col1, back_col2 = st.columns([11, 1])
 
 with back_col2:
 
-    with st.container(key="back_home_button"):
-
-        if st.button(
-            "←",
-            key="back_home",
-            help="Back to Home",
-            use_container_width=True,
-        ):
-            st.switch_page("app.py")
-
+    if st.button(
+        "←",
+        key="model_back",
+        help="Back to Home",
+        use_container_width=True,
+    ):
+        st.switch_page("app.py")
 
 
 # =========================================================
@@ -69,26 +67,28 @@ except Exception:
 
 
 # =========================================================
-# DATASET INFORMATION
+# LOAD DATASET
 # =========================================================
 
 try:
 
-    dataset = pd.read_csv(
-        DATASET_PATH
-    )
+    dataset = pd.read_csv(DATASET_PATH)
 
-    review_count = len(
-        dataset
-    )
+    review_count = len(dataset)
+
+    dataset_loaded = True
 
 except Exception:
 
+    dataset = pd.DataFrame()
+
     review_count = 0
+
+    dataset_loaded = False
 
 
 # =========================================================
-# TF-IDF FEATURES
+# LOAD VECTORIZER
 # =========================================================
 
 try:
@@ -99,41 +99,36 @@ try:
         VECTORIZER_PATH
     )
 
-    features = (
-        vectorizer.max_features
-        or 0
-    )
+    features = vectorizer.max_features or 0
 
 except Exception:
 
-    # Avoid breaking the dashboard if
-    # the vectorizer cannot be loaded.
     features = 10000
 
 
 # =========================================================
-# CONVERT METRICS TO PERCENTAGES
+# MODEL VALUES
 # =========================================================
 
-accuracy = (
-    metrics.get("accuracy", 0)
-    * 100
-)
+accuracy = metrics.get(
+    "accuracy",
+    0,
+) * 100
 
-precision = (
-    metrics.get("precision", 0)
-    * 100
-)
+precision = metrics.get(
+    "precision",
+    0,
+) * 100
 
-recall = (
-    metrics.get("recall", 0)
-    * 100
-)
+recall = metrics.get(
+    "recall",
+    0,
+) * 100
 
-f1_score = (
-    metrics.get("f1_score", 0)
-    * 100
-)
+f1_score = metrics.get(
+    "f1_score",
+    0,
+) * 100
 
 best_model = metrics.get(
     "best_model",
@@ -145,12 +140,13 @@ best_model = metrics.get(
 # HEADER
 # =========================================================
 
-st.title("Model Dashboard")
+st.title("Model")
 
 st.markdown(
     """
-Explore the performance of the TrustLens AI
-fake review detection model.
+Technical overview of the machine learning model
+behind TrustLens AI, including its pipeline,
+evaluation results and feature representation.
 """
 )
 
@@ -158,16 +154,141 @@ st.divider()
 
 
 # =========================================================
-# TOP METRICS
+# MODEL OVERVIEW
 # =========================================================
 
-st.subheader("📈 Model Performance")
+st.subheader("Model Overview")
+
+overview_col1, overview_col2 = st.columns(
+    [2, 1]
+)
 
 
-col1, col2, col3, col4 = st.columns(4)
+with overview_col1:
+
+    with st.container(border=True):
+
+        st.markdown(
+            "### Fake Review Classification"
+        )
+
+        st.write(
+            """
+TrustLens AI uses a text classification pipeline
+to distinguish between genuine and potentially fake
+product reviews.
+
+Review text is converted into TF-IDF feature vectors
+and classified using a Linear Support Vector Machine.
+"""
+        )
 
 
-with col1:
+with overview_col2:
+
+    with st.container(border=True):
+
+        st.markdown(
+            "### Classifier"
+        )
+
+        st.markdown(
+            f"## {best_model}"
+        )
+
+        st.caption(
+            "Selected machine learning model."
+        )
+
+
+# =========================================================
+# DETECTION PIPELINE
+# =========================================================
+
+st.markdown("")
+
+st.subheader("Detection Pipeline")
+
+st.caption(
+    "The prediction process from raw review text to classification."
+)
+
+
+step1, step2, step3, step4 = st.columns(4)
+
+
+with step1:
+
+    with st.container(border=True):
+
+        st.markdown("### 01")
+
+        st.markdown(
+            "Review Input"
+        )
+
+        st.caption(
+            "Product review text is provided as input."
+        )
+
+
+with step2:
+
+    with st.container(border=True):
+
+        st.markdown("### 02")
+
+        st.markdown(
+            "TF-IDF"
+        )
+
+        st.caption(
+            "Review text is transformed into numerical features."
+        )
+
+
+with step3:
+
+    with st.container(border=True):
+
+        st.markdown("### 03")
+
+        st.markdown(
+            "Linear SVM"
+        )
+
+        st.caption(
+            "The classifier evaluates the generated feature vector."
+        )
+
+
+with step4:
+
+    with st.container(border=True):
+
+        st.markdown("### 04")
+
+        st.markdown(
+            "Prediction"
+        )
+
+        st.caption(
+            "The review receives its classification."
+        )
+
+
+# =========================================================
+# MODEL PERFORMANCE
+# =========================================================
+
+st.markdown("")
+
+st.subheader("Model Performance")
+
+metric1, metric2, metric3, metric4 = st.columns(4)
+
+
+with metric1:
 
     st.metric(
         "Accuracy",
@@ -175,7 +296,7 @@ with col1:
     )
 
 
-with col2:
+with metric2:
 
     st.metric(
         "Precision",
@@ -183,7 +304,7 @@ with col2:
     )
 
 
-with col3:
+with metric3:
 
     st.metric(
         "Recall",
@@ -191,7 +312,7 @@ with col3:
     )
 
 
-with col4:
+with metric4:
 
     st.metric(
         "F1 Score",
@@ -200,76 +321,10 @@ with col4:
 
 
 # =========================================================
-# MODEL INFORMATION
-# =========================================================
-
-st.markdown("")
-
-st.subheader("Model Information")
-
-
-model_col1, model_col2, model_col3 = st.columns(3)
-
-
-with model_col1:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### Best Model"
-        )
-
-        st.markdown(
-            f"## {best_model}"
-        )
-
-        st.caption(
-            "Selected machine learning classifier."
-        )
-
-
-with model_col2:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "###  Dataset"
-        )
-
-        st.markdown(
-            f"## {review_count:,}"
-        )
-
-        st.caption(
-            "Reviews available for the project."
-        )
-
-
-with model_col3:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### TF-IDF"
-        )
-
-        st.markdown(
-            f"## {features:,}"
-        )
-
-        st.caption(
-            "Maximum text features used by the vectorizer."
-        )
-
-
-# =========================================================
 # PERFORMANCE CHART
 # =========================================================
 
 st.markdown("")
-
-st.subheader("Performance Comparison")
-
 
 performance_df = pd.DataFrame(
     {
@@ -288,213 +343,161 @@ performance_df = pd.DataFrame(
     }
 )
 
-performance_df = performance_df.set_index(
-    "Metric"
-)
-
-
 st.bar_chart(
-    performance_df,
+    performance_df.set_index("Metric"),
     y="Score",
-    height=350,
+    height=320,
+)
+
+st.caption(
+    "Evaluation results on the model's test data."
 )
 
 
 # =========================================================
-# METRIC DETAILS
+# DATA AND FEATURES
 # =========================================================
 
 st.markdown("")
 
-st.subheader("Metric Details")
+st.subheader("Data and Features")
+
+data1, data2, data3 = st.columns(3)
 
 
-detail_col1, detail_col2 = st.columns(2)
-
-
-with detail_col1:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### Accuracy"
-        )
-
-        st.write(
-            f"{accuracy:.2f}%"
-        )
-
-        st.caption(
-            "The percentage of reviews correctly classified "
-            "by the model."
-        )
-
-
-with detail_col2:
+with data1:
 
     with st.container(border=True):
 
         st.markdown(
-            "### Precision"
+            "### Dataset"
         )
 
-        st.write(
-            f"{precision:.2f}%"
+        st.markdown(
+            f"## {review_count:,}"
         )
 
         st.caption(
-            "Measures how many reviews predicted as a "
-            "class were actually that class."
+            "Reviews available in the project dataset."
         )
 
 
-detail_col3, detail_col4 = st.columns(2)
-
-
-with detail_col3:
+with data2:
 
     with st.container(border=True):
 
         st.markdown(
-            "### Recall"
+            "### Text Features"
         )
 
-        st.write(
-            f"{recall:.2f}%"
+        st.markdown(
+            f"## {features:,}"
         )
 
         st.caption(
-            "Measures how effectively the model identifies "
-            "reviews belonging to a class."
+            "Maximum TF-IDF vocabulary features."
         )
 
 
-with detail_col4:
+with data3:
 
     with st.container(border=True):
 
         st.markdown(
-            "### F1 Score"
+            "### Representation"
         )
 
-        st.write(
-            f"{f1_score:.2f}%"
+        st.markdown(
+            "TF-IDF"
         )
 
         st.caption(
-            "Balances precision and recall into a single score."
+            "Numerical representation of review text."
         )
 
 
 # =========================================================
-# MODEL PIPELINE
+# WHY TF-IDF
 # =========================================================
 
 st.markdown("")
 
-st.subheader("Detection Pipeline")
-
-
-step1, step2, step3, step4 = st.columns(4)
-
-
-with step1:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### 01"
-        )
-
-        st.markdown(
-            "**Review Input**"
-        )
-
-        st.caption(
-            "Product review text enters the system."
-        )
-
-
-with step2:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### 02"
-        )
-
-        st.markdown(
-            "**TF-IDF**"
-        )
-
-        st.caption(
-            "Text is converted into numerical features."
-        )
-
-
-with step3:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### 03"
-        )
-
-        st.markdown(
-            "**Linear SVM**"
-        )
-
-        st.caption(
-            "The trained classifier evaluates the review."
-        )
-
-
-with step4:
-
-    with st.container(border=True):
-
-        st.markdown(
-            "### 04"
-        )
-
-        st.markdown(
-            "**Prediction**"
-        )
-
-        st.caption(
-            "TrustLens AI returns the classification."
-        )
-
-
-# =========================================================
-# PROJECT SUMMARY
-# =========================================================
-
-st.markdown("")
-
-st.subheader("🛡️ TrustLens AI")
-
+st.subheader("Feature Representation")
 
 with st.container(border=True):
 
     st.markdown(
+        "### TF-IDF"
+    )
+
+    st.write(
         """
-TrustLens AI is an AI-powered fake review detection
-platform that uses Natural Language Processing,
-TF-IDF vectorization and a Linear SVM classifier
-to analyze product reviews.
+TF-IDF represents each review using weighted word
+features. Words that are informative within a review
+receive greater importance, while terms that occur
+frequently across the dataset receive lower weight.
 """
     )
+
+
+# =========================================================
+# EVALUATION SUMMARY
+# =========================================================
+
+st.markdown("")
+
+st.subheader("Evaluation Summary")
+
+with st.container(border=True):
 
     st.markdown(
         f"""
-**Best Model:** {best_model}
+The selected **{best_model}** classifier achieved:
 
 **Accuracy:** {accuracy:.2f}%
 
-**Dataset:** {review_count:,} reviews
+**Precision:** {precision:.2f}%
 
-**TF-IDF Features:** {features:,}
+**Recall:** {recall:.2f}%
+
+**F1 Score:** {f1_score:.2f}%
 """
     )
 
+    st.caption(
+        "These metrics describe performance on the evaluated test data "
+        "and should not be interpreted as proof that every prediction is correct."
+    )
+
+
+
+
+# =========================================================
+# MODEL LIMITATION
+# =========================================================
+
+st.markdown("")
+
+st.subheader("Model Limitation")
+
+st.write(
+    """
+The model identifies patterns learned from the training
+data. A review classified as fake or suspicious is a
+machine learning prediction and does not independently
+prove that the review is fraudulent.
+"""
+)
+
+
+# =========================================================
+# FOOTER
+# =========================================================
+
+st.markdown("")
+
+st.divider()
+
+st.caption(
+    "TrustLens AI • Machine Learning Model"
+)
