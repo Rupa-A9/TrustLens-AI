@@ -1,6 +1,7 @@
 import time
 import streamlit as st
 
+
 from services.predictor import predict_review
 from utils.load_css import load_css
 
